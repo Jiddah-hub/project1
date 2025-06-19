@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Snack Order</title>
+  <link rel="stylesheet" href="CODE.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Order Your Snacks</h1>
+    <div class="menu">
+      <div class="item">
+        <img src="somia-lone-wY8dOAApKE4-unsplash.jpg">
+        <p>Chips - $2</p>
+        <input type="number" min="1" value="1" id="qty-chips">
+        <button onclick="addToOrder('Chips', 2, 'qty-chips')">Add</button>
+      </div>
+      <div class="item">
+        <img src="mae-mu-kID9sxbJ3BQ-unsplash (1).jpg">
+        <p>Cookies - $3</p>
+        <input type="number" min="1" value="1" id="qty-cookies">
+        <button onclick="addToOrder('Cookies', 3, 'qty-cookies')">Add</button>
+      </div>
+      <div class="item">
+        <img src="david-foodphototasty-h7a8RsZFzgc-unsplash.jpg">
+        <p>Soda - $1.5</p>
+        <input type="number" min="1" value="1" id="qty-soda">
+        <button onclick="addToOrder('Soda', 1.5, 'qty-soda')">Add</button>
+      </div>
+    </div>
+    <h2>Your Order:</h2>
+    <ul id="orderList"></ul>
+    <p id="total">Total: $0</p>
+    <button class="checkout" onclick="checkout()">Checkout</button>
+    <div class="payment">
+  <h3>Enter Payment Info</h3>
+  <input type="text" id="card" placeholder="Card Number" />
+  <input type="email" id="email" placeholder="Your Email" />
+</div>
+    <div class="confirmation" id="confirmation" style="display:none;">
+      <h2>Order Confirmed!</h2>
+      <p>Thank you for your order!</p>
+    </div>  
+  </div>
+  <script src="CODE.JS"></script>
+</body>
+</html>
+
+
